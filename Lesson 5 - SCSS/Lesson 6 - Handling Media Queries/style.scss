@@ -1,0 +1,31 @@
+$colors: #ffa3a3 #a4ffa9 #a5c7ff;
+
+// MIXINS 
+
+@mixin breakpoint($minwidth,$maxwidth,$color){
+    @media screen and (min-width:$minwidth) and (max-width:$maxwidth){
+        @content; // must be included even when the invoker and or the @include is empty.
+        background-color: $color;
+         
+    }
+}
+
+
+// '@include' passes parameters and styling to '@mixin'
+
+div{
+    height:200px;
+
+    background-color: nth($colors,1);
+
+    @include breakpoint(500px,700px,nth($colors,2)){
+
+    }
+
+    @include breakpoint(701px,900px,nth($colors,3)){
+        
+    }
+
+
+    
+}

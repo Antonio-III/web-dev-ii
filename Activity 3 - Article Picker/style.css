@@ -1,0 +1,46 @@
+body{
+    width: 100vw; /* 100% of the screen-width */
+    margin: 0; /* removes default margins */
+
+}
+
+article{
+    width:100%; /* 100% width of the parent element, that being <section> */
+    background-color: #aaffc5;
+    text-align: center; /* centers the text */
+    padding: 50px 0px; /* 50px up and down, 0px left and right */
+    display: none; /* hides the content and styles as if it didn't exist */
+}
+
+/* for mobile in portrait orientation */
+@media screen and (max-width: 495px) and (orientation: portrait){ /* only applies when max-width is LESS THAN 495px */
+    #mobile-portrait {
+        display: block; /* displays the elements and their styles */
+        background-color: lime;
+    }
+}
+
+/* for mobile in landscape orientation */
+@media screen and (max-height: 493px) and (orientation: landscape) { /* only applies when max-height is LESS THAN 493px */
+    #mobile-landscape {
+        display: block; /* displays the elements and their styles */
+        background-color: skyblue;
+    }
+}
+
+
+/* for tablet in portrait orientation */
+@media screen and (max-width: 500px) and (orientation: portrait){
+    #tablet-portrait{
+        display: block;
+        background-color: red;
+    }
+}
+
+/* for tablet in landscape orientation or a desktop */
+@media screen and (max-height:490px) and (orientation:landscape){
+    #tablet-landscape-or-desktop{
+        display: block;
+        background-color: lime;
+    }
+}

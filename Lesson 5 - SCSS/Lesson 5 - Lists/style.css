@@ -1,0 +1,19 @@
+img:nth-child(1) {
+  border: 3px solid yellow;
+  border-radius: 10px;
+}
+
+img:nth-child(2) {
+  border: 3px solid green;
+  border-radius: 30px;
+}
+
+img:nth-child(3) {
+  border: 3px solid blue;
+  border-radius: 40px;
+}
+
+img:nth-child(4) {
+  border: 3px solid purple;
+  border-radius: 50px;
+}/*# sourceMappingURL=style.css.map */

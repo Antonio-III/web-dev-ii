@@ -1,0 +1,39 @@
+/* Among the 5 divs, only the sizes should be different */
+/* No using of nth-child or whatever */
+/* Remove default margins*/
+* {
+  margin: 0;
+}
+
+/* CSS Code here */
+.smallest, .biggest, .big, .medium, .small {
+  height: 90px;
+  width: 90px;
+  margin: 5px 0;
+  background-color: blueviolet;
+}
+
+/* Put the size variable outside the selector as the change becomes local*/
+.small {
+  height: 180px;
+  width: 180px;
+  background-color: beige;
+}
+
+.medium {
+  height: 270px;
+  width: 270px;
+  background-color: chocolate;
+}
+
+.big {
+  height: 360px;
+  width: 360px;
+  background-color: darkorange;
+}
+
+.biggest {
+  height: 450px;
+  width: 450px;
+  background-color: fuchsia;
+}/*# sourceMappingURL=style.css.map */

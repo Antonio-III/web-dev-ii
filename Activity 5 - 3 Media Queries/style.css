@@ -1,0 +1,67 @@
+
+#section1{
+  background-color: red;
+}
+
+#section2{
+  background-color: blue;
+}
+
+#section3{
+  background-color: green;
+}
+
+*{
+  margin:0; /* Removes default margin settings */
+}
+
+section{
+  display:flex;
+  flex-direction: column;
+
+}
+
+/* 1.2 Paragraph text has a margin of 10px on all sides. */
+p{
+  margin:10px;
+}
+
+div{
+  display:flex;
+}
+
+
+/* MEDIA QUERIES  */
+
+/* 2.1 For devices with viewport widths of 480px and under, each <section> should be full screen width. */
+@media screen and (max-width: 480px){
+  section{
+    width:100vw;
+  }
+
+  div{
+    flex-flow: column nowrap;
+  }
+}
+
+/* 2.2 For devices with viewport widths of over 480px and up to and including 800px, two <section> elements should be side-by-side */
+@media screen and (min-width: 481px) and (max-width:800px){
+  section{
+    width: 50vw;
+    flex: 0 1 auto;
+  }
+
+  div{
+    flex-flow: row wrap;
+  }
+
+}
+
+/* 2.3 For devices with viewport widths of over 800px, all three <section> elements should be side by side. */
+@media screen and (min-width:801px){
+  section{
+    width: 33vw;
+    flex: 1 1 auto;
+  }
+  
+}

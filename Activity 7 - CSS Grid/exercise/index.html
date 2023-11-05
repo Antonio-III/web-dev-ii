@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-areas:
+            'header header header' 'main-left main-center main-right' 'footer footer footer';
+            grid-gap: 0px;
+
+            /* Syntax of minmax() function: minmax(minsize, maxsize). Auto will look for the screen of the device */
+            grid-auto-rows: minmax(100px, auto); /* grid-auto-rows refers to the size of the height (cross-axis of rows) */
+            grid-auto-columns: minmax(100px, auto);
+        }
+
+        .header{
+            grid-area: header;
+        }
+        .main-left{
+            grid-area: main-left;
+        }
+        .main-center{
+            grid-area: main-center;
+        }
+
+        .main-left{
+            grid-area: main-left;
+        }
+
+        .main-left{
+            grid-area: main-left;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Deisgn a webpage layout using CSS grid properties and functions. The task involves creating a responsive three-column layout with a header and footer, that spans the entire gridl. Make use of grid-template-areas. grid-gap, grid-auto-rows, grid-auto-columns, mimmax(), and repeat() functions in your CSS code. -->
+
+    <div class ="grid-container">
+        <div class = "header">      Header      </div>
+        <div class = "main-left">   Main-left   </div>
+        <div class = "main-center"> Main-center </div>
+        <div class = "main-footer"> Main-right  </div>
+        <div class = "footer">      Footer      </div>
+    </div>
+
+
+    
+</body>
+</html>

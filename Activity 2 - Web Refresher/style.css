@@ -1,0 +1,86 @@
+/* Task 2 - Structuring with CSS */
+/* 2.1 Create a CSS stylesheet with a standard file name. */
+
+body{
+    margin: 0 5%; /* Tried to copy the "Expected Output". Syntax is 0 (up and down) 0 (left and right) */
+    display:flex; /* Required to allow use of justify-content */
+    flex-direction: column; /* They will stack on top of another */
+    /*width:100%; /* 2.3 Set the width of the body to the pixel width of the banner image. 
+                     Removed since it doesn't include its paddings/margins into its size */
+    justify-content: center; /* 2.4 Centre the body using an appropriate styling method. */ 
+
+
+}
+
+/* Task 3 - Styling the nav and footer */
+nav{
+    /*width: 100%; /* 2.5 Add a width to the <nav> and <footer> of 100% of the body width.
+                      Removed since it doesn't include its paddings/margins into its size */
+    text-align: center; /* 2.4 Centre the body using an appropriate styling method. */
+     
+    /* 3.1 Use an appropriate CSS property to place <nav> items side-by-side.
+        -It is side-by-side by default */
+
+    padding: 20px 0; /* 3.2 Add padding of 20px to the top and bottom of <nav>. 
+                        20px up and down, 0 left and right  */
+                  
+    /*border: 1px solid red; For testing purposes */
+    justify-content: center;
+    display: flex;
+}
+
+footer{
+    width: 100%;               /* 2.5 Add a width to the <nav> and <footer> of 100% of the body width.
+                                  Shows no effect */
+    height: 150px;             /* 2.6 Give the footer a height of 150px. */
+    background-color: black; /* 3.5 Give <footer> a black background */
+    margin-top: 20px;          /* 3.5 Add a 20px margin to the top of the footer */
+}
+
+
+a{
+    text-decoration: none; /* 3.4 Remove all styling for the <a> tag */
+    color: rgb(255, 156,  13); /* Changes the default color of hyperlink to the same one
+                                    in "Expected Output" */
+    padding: 0 20px; /* 3.3 Add padding of 20px to the left and right of each <nav> item.
+                        0 up and down, 20px left and right */
+}
+
+a:hover{
+    color: rgb(  4,  45, 232); /* 3.4 Use appropriate CSS selectors and properties
+                                    to change black link text to blue on mouse hover. */
+
+}
+
+/* Task 4 - Styling <section> */
+section{
+    width: calc(100%-22px); /* 4.1 Give both <section> elements a width of 100% */
+                            /* 4.4 Use the calc() CSS function to remove 22px from the width of each <section>. This
+                               will account for the padding, plus the 1px of border each side */
+
+    border: 1px solid black; /* 4.1 A black solid border of 1px */
+    margin-bottom: 20px; /* 4.1 20px margin at the bottom */
+    padding: 0 20px; /* 4.3 Add padding to the sections to inset the text by 10px on the left and right.
+                        0 up and down, 20px left and right */
+   
+}
+
+#banner{
+    margin-bottom: 20px; /* 4.2 Add a 20px margin to the bottom of image, but do this using an id selector (e.g. give
+                            <img> an id of ‘banner’ and style that id using CSS). */
+}
+
+/* Task 5 - Styling text */
+*{
+    /* margin: ; /* Block-level elements—by default– create unnecessary height and width increase. 
+                    Adding this removes it */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* 5.1 Use appropriate selectors and properties 
+                                                         to change the font to Verdana. 
+                                                         This was autofilled */                                                        
+}
+
+h2{
+    font-size: 14pt; /* 5.2 Style <h2> with a font size of 14pt. */
+}
+
+/* Task 6 - Comment your code */

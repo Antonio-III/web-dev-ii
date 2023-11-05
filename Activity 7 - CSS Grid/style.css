@@ -1,0 +1,29 @@
+body{
+    margin: 0; 
+    padding: 10px; /*10px of empty space in the body before its contents, as well as elements */
+}
+
+header, footer{
+    background-color: red;
+    padding: 20px; /* 20px of empty space in the selector before its contents, including elements */
+}
+
+main{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap: 0px; /* Gap between the columns. Will shorten the columns to accomodate the gap. Which side will have a gap depends on how they are placed in grid-template-columns */
+}
+
+section{
+    padding:20px;
+    background-color: blue;
+    border: 10px solid green;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 760px){
+    main{
+     grid-template-columns: 1fr;   
+    }
+}

@@ -1,0 +1,22 @@
+$roundness: 0px 10px 20px 30px 40px 50px;
+$colors: red green blue yellow purple;
+
+img:nth-child(1){
+    border:3px solid nth($colors,4);
+    border-radius:nth($roundness,2);
+}
+
+img:nth-child(2){
+    border:3px solid nth($colors,2);
+    border-radius:nth($roundness,4);
+}
+
+img:nth-child(3){
+    border:3px solid nth($colors,3);
+    border-radius:nth($roundness,5);
+}
+
+img:nth-child(4){
+    border:3px solid nth($colors,5);
+    border-radius:nth($roundness,6);
+}

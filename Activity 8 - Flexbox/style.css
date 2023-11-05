@@ -1,0 +1,11 @@
+*{
+    margin:0;
+}
+
+.item {
+    height: 200px;
+    width:100px;
+    border:1px solid red;
+    background-color: bisque;
+}
+

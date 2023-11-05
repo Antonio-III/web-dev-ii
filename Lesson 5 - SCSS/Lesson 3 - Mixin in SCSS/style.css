@@ -1,0 +1,13 @@
+.primary-button {
+  background-color: dodgerblue;
+}
+
+.primary-button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border: 20px solid #cccc00;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

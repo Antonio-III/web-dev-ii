@@ -1,0 +1,30 @@
+section{
+    width:50%;
+    float:left;
+    
+}
+
+img{
+    max-width: 100%; /* Will not go over 100% width if device width is really small */
+    height:auto; /* no effect */
+}
+
+p{
+    margin:10px /* 1.2 paragraph has a margin of 10px */
+}
+
+/* Styles for devices with a width of 500 and under */
+@media screen and (max-width: 500px) {
+    img{
+        width:100%; /* No effect because it's already at its max width in 500px or lower */
+    }
+}
+
+/* Styles for devices with width of over 500px */
+@media screen and (min-width:501px){ /* 501px will only apply at 502px. While 500px will apply at 500px */
+    img{
+        width:50%;
+        float:left;
+        
+    }
+}

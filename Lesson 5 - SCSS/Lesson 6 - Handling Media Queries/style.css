@@ -1,0 +1,14 @@
+div {
+  height: 200px;
+  background-color: #ffa3a3;
+}
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  div {
+    background-color: #a4ffa9;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  div {
+    background-color: #a5c7ff;
+  }
+}/*# sourceMappingURL=style.css.map */

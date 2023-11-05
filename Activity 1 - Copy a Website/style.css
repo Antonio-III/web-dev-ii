@@ -1,0 +1,107 @@
+*{
+    margin: 0px; /* Remove default margin settings for all elements */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* The above code was an autofill, I do not know what it means. But I know it sets ALL (*) the elements' font-family to something */
+}
+
+body{
+    background-color: rgb( 74, 136, 219); /* Match the blue color of the page */
+}
+
+.main{
+    /* padding: 0; Creates an empty whitespace in the container that pushes away the contents from the container. Also increases size  */
+    margin: 0 3%;  /* Creates an empty space outside the container to separate itself from other containers. 
+                   Makes it smaller as it compresses into itself. 0 margin from top and down, 3% margin at left and right */ 
+    margin-top: 1%; /* 1% of Empty space at the top of the selector */
+    border-radius: 5px; /* Rounds the edges of the square */
+    background: white; /* Match the background color of the page */
+}
+
+.top{
+    padding: 45px;
+}
+
+.links{
+    text-align: right; /* Aligns the text to the right side of the container */
+    position: relative; /* Required to not have "static" value if you want to use position-changing properties (i.e. bottom: 5px;) */
+    bottom: 40px; /* Creates an empty space at the BOTTOM of the container (ignores padding/margin) */
+    right: 20px; /* Creates an empty space at the RIGHT of the container (ignores padding/margin) */
+}
+
+a{
+    margin: 1px; /* Separates the <a> elements by 1px */
+}
+
+.top_li{
+     /* list-style: none; Removes the bullet icon from creating a list.  */
+    display: inline-block; /* Allows for the elements to have the property of an inline element, 
+                              so the next element doesn't start in a new line. It also allows for the properties of a block element, 
+                              where you have control over its dimensions, padding, etc. Also does list-style: none;, for some reason */
+}
+
+.middle{
+    background-color: #6ebca2; /* Match the color of the page */
+    padding: 50px; /* Creates 50px of empty space between the container and its contents from top, bottom, left, and right */
+}
+
+.pic_container{
+    display: flex; /* Allows the use of justify-content so that the X-pos will be at the center */
+    justify-content: center; /* Align items on the main axis */
+}
+
+.pic_img{
+    height: 40vh; /* Increases height size. For some reason, width doesn't work for .svg files
+                     It also somehow increases the container's size. Not good */
+}
+
+.bottom {
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 50px;
+}
+
+.blog_title{
+    color: rgb( 81,  37, 128); /* Changes the TEXT color of the element with this class */
+}
+
+.left{
+    flex:3; /* Will take 66% of the flex space, I think */
+    padding-top: 50px;
+
+}
+
+.right{
+    flex:1; /* Will take 33% of the flex space, I think */
+
+}
+
+hr{
+    margin-top: 60px;
+}
+
+.yellow_box{
+
+    position: absolute;
+    background-color: rgb(252, 214, 107);
+    padding: 20px;
+    margin-left: 20px;
+    width: 17vw;
+    height: 20vh;
+
+}
+
+.bottom_right_link{
+    color: black;
+}
+
+.red_box{
+    position:relative;
+    background-color: rgb(251,  85,  87);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: white;
+}

@@ -1,0 +1,19 @@
+@mixin button-styles($bg-color, $text-color){
+    background-color: $bg-color;
+    color: $text-color;
+    padding:10px;
+    border: 20px solid darken(yellow,10%);
+    border-radius: 4px;
+    text-align: center;
+    cursor:pointer;
+}
+
+%background{
+    background-color: dodgerblue;
+}
+// extend will go first in the css
+.primary-button{
+    @extend %background;
+    @include button-styles(blue,white);
+   
+}

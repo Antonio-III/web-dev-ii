@@ -1,0 +1,28 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply basic styles to header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Apply basic styles to main sections */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Style individual main sections */
+section {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+}

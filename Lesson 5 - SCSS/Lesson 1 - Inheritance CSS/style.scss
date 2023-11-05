@@ -1,0 +1,46 @@
+$default-color:grey;
+$warm-color: red;
+$cold-color: blue;
+
+/* Default*/
+
+*{
+    margin:0;
+}
+
+/* Your code here */
+
+.default-div{
+    width:400px;
+    height:400px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid black;
+    background-color: $default-color;
+    color: white;
+
+}
+
+.warm-div{
+    @extend .default-div;
+    background-color: $warm-color;
+
+}
+
+.cold-div{
+    @extend .warm-div;
+    background-color: $cold-color;
+}
+
+.green-div{
+    @extend .cold-div;
+    background-color: greenyellow;
+}
+
+.brown-div{
+    @extend .default-div;
+    background-color: burlywood;
+}

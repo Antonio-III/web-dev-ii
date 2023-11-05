@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+.default-div, .adjusted-div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #acc0e0;
+  margin: 5px;
+}
+
+.adjusted-div {
+  /* possible values: darken, saturate, desaturate, invert, grayscale, complement. desaturate at 100% is equivalent to greyscale. The last 2 don't take second argument  */
+  background-color: #533f1f;
+}/*# sourceMappingURL=style.css.map */

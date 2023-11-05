@@ -1,0 +1,97 @@
+$fontfamily: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$textsize: 20px;
+$maincolor: rgb(0, 0, 0);
+$secondarycolor: rgb(242, 255, 0);
+
+$sun_color: rgb(223,  90,   0);
+$moon_color: rgb(210, 212, 213);
+
+
+/*        STYLES         */
+
+/* GENERIC */
+*{
+    margin: 0; /* Remove default margins*/
+}
+body{
+    display:flex;
+    flex-flow: column;
+    height:100vh;
+}
+
+
+/* TOP DIVISION */
+.heading{
+    display:flex;
+    align-items: center;
+}
+
+.heading h1{
+    margin-left:2vw;
+}
+
+
+/* MIDDLE DIVISION */
+.nav{
+    background: $maincolor;
+    color:$secondarycolor;
+    margin-top: 5px;
+ 
+    
+    
+}
+
+ul{
+    display:flex;
+    padding-inline-start: 0px;
+    
+}
+
+li{
+    display:inline-block; /* We want the text to not create a newline for each entry and to remove bulltet points*/
+    
+  
+    margin:0 5vw;
+    padding:2vw;
+    
+    
+    
+}
+a{
+    text-decoration: none;
+    color: yellow;
+    flex:1 0 0;
+
+    text-align: center;
+}
+a:hover{
+    background: #191919;
+}
+
+
+/* BOTTOM DIVISION */
+.main{
+    display:flex;
+    flex:1;
+}
+.img{
+    height:300px;
+}
+
+.section{
+    background: $maincolor;
+    color:$sun_color;
+    align-items: flex-start; /* So the item doesn't choose resolve to its default value when we make a flex container */
+
+    display:flex; /* Make this container a flex so we can use the 'auto' value of the margin for later */
+    flex-direction: column;
+}
+
+.section:nth-child(2){
+    color: $moon_color;
+}
+
+p{
+    padding:2vw;
+    margin-top:auto;
+}

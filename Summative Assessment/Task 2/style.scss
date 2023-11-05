@@ -1,0 +1,369 @@
+// h2 default font-size: 24px
+// p default font-size: 16px
+// a has 20px??? 
+
+%shadow-effect{
+        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+*{
+    margin:0; /* Remove default margins */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+.header{
+    background-color: #1e90ff;
+    color:rgb(255, 255, 255); 
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height:10vh; // Set height or else child elements' height will be their contents' when child is given 100% height.
+
+
+    padding:0 2vw;
+   // padding-inline-end: 0px;
+}
+
+.header>h1{
+    font-size: 32px;
+}
+
+input{
+    padding: .5vw;
+    
+    margin-left: 10vw; // Move item to the right
+
+    width:20vw;
+
+    font-size:.7em;
+}
+
+.links{
+    height:100%;
+    
+    width:20vw;
+
+    display:flex;
+    //align-items: center;
+    //background-color: black;
+
+  //  padding-inline-end: 2vw;
+}
+
+.links>a{
+    color:white;
+    text-decoration: none;
+
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+    flex:1;
+
+    height:100%; // Will increase the hitbox
+
+    font-size: .8em;
+}
+
+.links>a:hover{
+    @extend a;
+
+    background-color: rgb(56,157,255);
+}
+
+.body{
+    padding: 1.5vw 10vw  0 10vw ; 
+
+    display:flex;
+    justify-content: center;
+
+    background-color: rgb(238,238,238);
+}
+
+.items{
+    //background-color: chartreuse;
+
+    display:flex;
+
+    //width: 80%; // <body> default is 100% viewport - scrollbar
+}
+
+$flex: 5;
+.items > .left-item{
+    flex:$flex;
+}
+
+.left-movie{
+    @extend %shadow-effect;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    padding-bottom:1vw;
+}
+
+.left-movie > .text{
+    padding:1vw;
+}
+
+img{
+    width:100%;
+
+    display:block;
+}
+
+
+p{
+    margin: 1vw 0;
+    //default font-size:16px;
+}
+
+.button{
+    
+    background-color: rgb( 27, 152, 255);
+
+    color:white;
+
+    border:none; // Remove the default black border
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    padding:0;
+}
+
+
+
+
+.items > .right-item{
+   // background-color:indigo;
+   display:flex;
+
+   flex-flow:row wrap;
+
+   flex:10-$flex;
+}
+
+.right-movie{
+    @extend %shadow-effect;
+
+    padding:3%;
+
+    display:flex;
+    flex-flow: column nowrap;
+
+    box-sizing: border-box;
+}
+
+.right-movie >.text{
+    padding-top:1vw;
+}
+
+.right-movie > .button{
+    margin:1vw;
+}
+
+.left-movie a, .right-movie a{
+    border-radius: 3px;
+
+    padding:0 .6vw .6vw;
+
+    align-self: flex-end;
+
+    margin: auto 1vw 0vw auto;
+
+    background-color: rgb( 27, 152, 255);
+
+    color:white;
+
+    border:none; // Remove the default black border
+}
+
+#millenium{
+    margin-top:auto;
+}
+
+.left-movie, .right-movie{
+    background-color: white;
+}
+
+.footer{
+    background-color: rgb(238, 238, 238);
+    
+    display: flex;
+    justify-content: center;
+
+    padding:3vw 0 1.5vw 0;
+
+}
+
+//Media queries
+@media (min-width:1281px){
+    $margin:1vw;
+    .right-movie{ 
+        padding:3%;
+    
+        width:calc(50% - $margin);
+    }
+
+    :nth-child(odd of .right-movie){
+        margin:0 $margin; // 1vw left and right Will not be counted in box-sizing
+    }
+
+    :nth-last-child(-n +2 of .right-movie){
+        margin-top:$margin;
+    }
+
+    :nth-last-child(1 of .links>a){
+        display:none;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1280px){
+    .body{
+        padding: 1.5vw 2vw  0 2vw; 
+    }
+
+    $margin:1vw;
+    .right-movie{  
+        padding:3%;
+    
+        width:calc(50% - $margin);
+    }
+
+    :nth-child(odd of .right-movie){
+        margin:0 $margin; // 1vw left and right Will not be counted in box-sizing
+    }
+
+    :nth-last-child(-n +2 of .right-movie){
+        margin-top:$margin;
+    }
+
+    :nth-last-child(1 of .links>a){
+        display:none;
+    }
+    
+    .links{
+        width:25vw;
+    }   
+}
+
+@media (min-width:801px) and (max-width:1024px){
+    .body{
+        padding: 1.5vw 2vw  0 2vw ; 
+    }
+
+    $flex: 7;
+    .items > .left-item{
+        flex:$flex;
+    }
+
+    .items > .right-item{
+        flex:10-$flex;
+     }
+
+    .right-movie{
+        width:100%;
+
+        margin-left:.5vw;
+    }
+
+    :nth-last-child(-n +3 of .right-movie){
+        margin-top:1.5vw;
+       
+    }
+
+    :nth-last-child(1 of .links>a){
+        display:none;
+    }
+
+    .links{
+        width:30vw;
+    }
+}
+
+@media (min-width:481px) and (max-width:800px) {
+    .items{
+        flex-direction: column;
+    }
+
+    $margin:2vw;
+    .right-movie{
+        margin-top:$margin;
+
+        width:calc(50% - ($margin/2));
+    }
+
+    :nth-child(odd of .right-movie){
+        margin-right:$margin;
+    }
+
+    .footer{
+        padding:7vh 0 5vh 0;
+    }
+
+    :nth-child(-n + 4 of .links>a){
+        display:none;
+    }
+
+    :nth-last-child(1 of .links>a){
+        flex:0; //change flex from 0 to 1 so we can apply auto margins
+        margin-left: auto;
+
+        padding:0 2vw;
+    }
+
+    input{
+        display:none;
+    }
+}
+
+@media (max-width:480px){
+    .items{
+        flex-direction: column;
+    }
+
+    .items > .right-item{
+        flex-flow: column nowrap;
+     }
+
+    $margin:1.5vw;
+    .left-movie{
+        margin:$margin 0;
+    }
+     
+     .right-movie{    
+        margin:$margin 0; // 1vw left and right Will not be counted in box-sizing
+
+        width:100%;
+    }
+
+    .footer{
+        padding:7vh 0 5vh 0;
+    }
+
+    .left-movie > a, .right-movie > a{
+        margin: 0 2vw 2vw auto;
+
+        padding: 0 2vw 1vw 2vw;
+    }
+    
+    :nth-child(-n + 4 of .links>a){
+        display:none;
+    }
+
+    :nth-last-child(1 of .links>a){
+        flex:0;
+        margin-left: auto;
+
+        padding:0 2vw;
+    }
+    
+    input{
+        display:none;
+    }
+}

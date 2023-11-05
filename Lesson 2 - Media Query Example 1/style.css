@@ -1,0 +1,23 @@
+body{ 
+    width: 100vw; /* 100% viewport width a.k.a 100% of the screen */
+    margin: 0; /* removes default margin settings */
+}
+
+#banner{
+    height: 150px;
+    background-color: #aaceff;
+}
+
+/* Option 1 - Focuses on the width of the device in landscape, which is the height of the device in portrait for mobile. */
+@media screen and (max-width: 900px) and (orientation: landscape){
+    #banner{
+        height: 200px;
+    }
+}
+
+/* Option 2 - Focuses on the height of the device in landscape, which is the width of the device in portrait for mobile */
+@media screen and (max-height: 480px) and (orientation: landscape){
+    #banner{
+        height: 70px;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Picture Tags </title>
+    <style>
+        *{
+            margin:0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif; /* Set a font to the page */
+            display: flex; /* Allows the use of flex-flow */
+            flex-flow: column nowrap; /* Aligns elements on top of each other */
+            margin:20px; /* There will be 20 pixels of empty space outside of the body tag */
+            align-items: center; /* Centers the items */
+        }
+
+        picture img{
+            width:100%;/* Makes the picture height 100% the size of its container. Else the picture gets its base size, which is bigger than the container */
+            display:block; /* To display the image as a block. It by-default displays as an inline-block element where the bottom of the page is the baseline for letters, which reserves pixels for letters that go below the baseline like 'p' and 'q' */
+        }
+
+        h2{
+            font-size: 4vh; /* Size of the font will be 3% of the viewport's height */
+        }
+    </style>
+</head>
+<body>
+    <h2> Basic example of the picture tag </h2>
+    
+    <div>
+        <picture>
+            <source srcset = "images\polar-bear-196318_640.jpg" media = "(max-width: 600px)">
+            <source srcset = "images\polar-bear-404314_1280.jpg" media = "(max-width: 900px)">
+            <source srcset = "images\marek-szturc-8Ou3EZmTMWA-unsplash.jpg">
+            <img src = "images\polar-bear-484515_1920.jpg" alt = "Polar bear Picure">
+        </picture>
+
+</body>
+</html>

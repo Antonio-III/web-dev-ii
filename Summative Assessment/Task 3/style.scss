@@ -1,0 +1,114 @@
+// variables
+$radius: 70px, 80px, 90px, 100px;
+
+$colors: #8ccff7,#e2eff1, #4e89ae, #43658b, #ed6663, #ffa372, #444;
+$selected_colors: nth($colors,3), nth($colors,4), nth($colors,5), nth($colors,6);
+$footer_colors: nth($colors,2), nth($colors,1);
+
+
+// mixins
+@mixin flex-container-row{
+    display:flex;
+    flex-direction: row;
+
+    justify-content: center; // center direct children on the x-axis
+    align-items: center;
+}
+
+@mixin flex-container-column{
+    display:flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+// Change width on 621px above
+@mixin breakpoint($minwidth){
+
+    // media will apply to caller by default
+    @media (min-width:$minwidth){
+    
+    // will be interpreted as: '.circles' of caller
+   .circles{
+        @include flex-container-row();
+    }
+}
+
+}
+
+// css rules
+*{
+    margin:0;
+}
+
+.container{
+    @include breakpoint(621px);
+
+    
+}
+
+.image{
+    @include flex-container-row();
+
+    background-color: nth($colors,1);
+  
+}
+
+img{
+    display:block;
+}
+
+
+// Create 2 footer elements
+@for $i from 1 through length($footer_colors){
+    :nth-child(#{$i} of .footer){
+        background-color: nth($footer_colors,$i);
+
+        height:50px;
+    }
+}
+
+.circles{
+    @include flex-container-column();
+
+    background-color: nth($colors,2);
+
+    padding: 10px 0;
+}
+
+// Create 4 lines/circles, with specified styles
+@for $i from 1 through 4{
+
+    // colors
+    :nth-child(#{$i} of .color){
+        background-color: nth($selected_colors,$i);
+        height:40px;
+    }
+
+    // on hover
+    :nth-child(#{$i} of .color:hover){
+        background-color: nth($colors,7);
+    }
+
+    // circles
+    :nth-child(#{$i} of .circle){
+        width:nth($radius,$i);
+        height:nth($radius,$i);
+        
+        background-color: nth($selected_colors,$i);
+        
+        align-self: center;
+
+        margin: 10px;
+
+        border-radius: 50%;
+    }
+    
+    // on hover
+    :nth-child(#{$i} of .circle:hover){
+        background-color: nth($colors,7);
+    }
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            margin:0; /* Remove default margin settings */
+        }
+        .container{
+            display:flex ;
+            flex-flow: row nowrap;
+            background-color: aqua;
+            
+        }
+        .item{
+            margin:1vw; /* If you have 2 items with 1px of margin, they will have 2px of margin in between them */
+            background-color: yellow;
+            flex: auto;
+            width: 28vw; /* 30% of the viewport width*/
+            height: 50vh;
+            padding: 1vw; /* In a laptop, the width is always greater than its height. It's always the case that the vw effect is greater than the vh unless you're on portrait mode for phones */
+            
+        }
+
+        
+        .main_container{
+            background-color: aqua;
+            padding:1vh; /* We put a padding so that the text doesn't stick to the edge */
+        }
+        
+    </style>
+</head>
+<body>
+    <!---The whole point of this element is because I wanted to write "I am Container" -->
+    <div class = 'main_container'>
+     
+        <h1> I am Container </h1>
+     
+        <div class ='container'>
+        
+            <div class = 'item'>
+            
+                <p> I am small </p>
+        
+            </div>
+
+            <div class = 'item'>
+        
+                <p> I have more content than the very small item </p>
+        
+            </div>
+
+            <div class = 'item'>
+        
+                <p> "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain." </p>
+              
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

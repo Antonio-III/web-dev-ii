@@ -1,0 +1,32 @@
+/* Default*/
+* {
+  margin: 0;
+}
+
+/* Your code here */
+.default-div, .brown-div, .warm-div, .cold-div, .green-div {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: grey;
+  color: white;
+}
+
+.warm-div, .cold-div, .green-div {
+  background-color: red;
+}
+
+.cold-div, .green-div {
+  background-color: blue;
+}
+
+.green-div {
+  background-color: greenyellow;
+}
+
+.brown-div {
+  background-color: burlywood;
+}/*# sourceMappingURL=style.css.map */
