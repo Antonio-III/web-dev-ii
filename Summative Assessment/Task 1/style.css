@@ -7,7 +7,7 @@
 
 #logo{
   padding:10px;
-  width: 5vh; /* Svg files generally have the same width and height at base. Changing the property to width/height will not change anything. 
+  width: 5%; /* Svg files generally have the same width and height at base. Changing the property to width/height will not change anything. 
 
   Margin/paddings are added on top of the set viewport size, so it causes unnecessary size increase. */  
 }
@@ -42,6 +42,10 @@ p{
   .cover{
       width: 100%; /* We use percentages because viewport units ignore the existence of scrollbars because the space scrollbars take is part of the viewport, but we want our elements to respect its space, so we set to %  */
     }
+
+  #logo{
+    width:15%;
+  }
 }
 
 @media (min-width:481px) and (max-width:800px){
