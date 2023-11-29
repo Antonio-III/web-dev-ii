@@ -6,32 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="get-dog" onclick="button_click()"> Give dog</button>
+    <button id="get-dog" onclick="GetDog"> Give dog</button>
     <div id="dog-img"></div>
 
 <script>
-    function button_click(){
+const dog_url="https://dog.ceo/api/breeds/image/random"
+// refers to the html with the id
+const dog_div=document.getElementById("dog-img");
+function GetDog(){
+    const fetchdog=fetch(dog_url)
+    fetchdog
+        .then(function(response){
+            const received_fetch=response.text()
+            return received_fetch
+        })
+        .then(function(processedResponse){
+            const dog_object=JSON.parse(processedResponse);
+            const img=document.createElement("img");
+            img.src=dog_object.message;
+            img.alt="Dog"
 
-    const dog_url="https://dog.ceo/api/breeds/image/random"
-    // refers to the html with the id
-    const dog_div=document.getElementById("dog-img");
-    function GetDog(){
-        const fetchdog=fetch(dog_url)
-        fetchdog
-            .then(function(response){
-                const received_fetch=response.text()
-                return received_fetch
-            })
-            .then(function(processedResponse){
-                const dog_object=JSON.parse(processedResponse);
-                const img=document.createElement("img");
-                img.src=dog_object.message;
-                img.alt="Dog"
+        })
 
-            })
-
-    }
 }
+
 </script>
 </body>
 </html>
