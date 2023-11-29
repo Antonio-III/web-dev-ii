@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event </title>
+</head>
+<body>
+    <button class="button-event">What time is it?</button>
+    <p class="date"></p>
+<script>
+    const button=document.querySelector(".button-event")
+    const p=document.querySelector(".date")
+    button.addEventListener("click",function(){
+        p.innerHTML=Date()
+    })
+</script>
+</body>
+</html>

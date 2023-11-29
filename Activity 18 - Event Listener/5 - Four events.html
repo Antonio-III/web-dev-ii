@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build-a-box</title>
+    <style>
+        *{
+            margin:0;
+
+            box-sizing: border-box;
+
+            overflow: hidden;
+        }
+        body{
+            display:flex;
+            flex-direction: column;
+        }
+        header{
+            text-align: center;
+        }
+        .box{
+            min-height:70vh;
+
+            border:1px solid grey;
+
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+        #boxmodel{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid black;
+           
+            width:20px;
+            height:20px;
+        }
+        .options{
+            display:flex;
+            
+            min-height:10vh;
+        }
+        .options>input{
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <header><h1> Build-a-box</h1></header>
+    <div class="box">
+        <div id="boxmodel"></div>
+    </div>  
+    <div class="options">    
+        <input id="height" placeholder="Enter height: default 20px">
+        <input id="width" placeholder="Enter width: default 20px">
+        <input id="color" placeholder="Enter color">
+        <input id="text" placeholder="Enter text">
+    </div>
+   
+    <script>
+        const box=document.getElementById("boxmodel")
+        const height=document.getElementById("height")
+        const width=document.getElementById("width")
+        const color=document.getElementById("color")
+        const text=document.getElementById("text")
+        const test=document.getElementById("test")
+        height.addEventListener("change",function(){
+            box.style.height=height.value
+        })
+
+        width.addEventListener("change",function(){
+            box.style.width=width.value
+        })
+        color.addEventListener("change",function(){
+            box.style.backgroundColor=color.value
+            if (color.value==='black'){
+                box.style.color='white'
+            }
+        })
+        text.addEventListener("change",function(){
+            box.innerText=text.value
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change event</title>
+</head>
+<body>
+    <div class="box"></div>
+    <input class="input" placeholder="type a color">
+<style>
+    .box{
+        border: 1px solid black;
+        width:100px;
+        height:100px;
+
+    }
+</style>
+<script>
+    const box=document.querySelector(".box")
+    const input=document.querySelector(".input")
+
+    input.addEventListener("change",function(){
+        box.style.backgroundColor=input.value;
+    });
+    
+</script>    
+</body>
+</html>

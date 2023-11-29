@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyup Event</title>
+</head>
+<body>
+    <input class="input" placeholder="type here">
+    <p class="paragraph"> Nothing has happened yet.</p>
+
+<script>
+    // querySelector selects by class. CSS selector rule applies (dot . for classes)
+    const input=document.querySelector(".input")
+    const paragraph=document.querySelector(".paragraph")
+
+    input.addEventListener("keyup",function(){
+        paragraph.innerText=input.value
+    })
+</script>
+</body>
+</html>
