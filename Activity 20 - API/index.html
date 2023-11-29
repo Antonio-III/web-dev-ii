@@ -6,11 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="get-dog" onclick="GetDog"> Give dog</button>
+    <button id="get-dog"> Give dog</button>
     <div id="dog-img"></div>
 
 <script>
 const dog_url="https://dog.ceo/api/breeds/image/random"
+
 // refers to the html with the id
 const dog_div=document.getElementById("dog-img");
 function GetDog(){
@@ -21,15 +22,19 @@ function GetDog(){
             return received_fetch
         })
         .then(function(processedResponse){
-            const dog_object=JSON.parse(processedResponse);
-            const img=document.createElement("img");
-            img.src=dog_object.message;
-            img.alt="Dog"
+            const dog_object=JSON.parse(processedResponse)
+
+            const img=document.createElement("img")
+            img.src=dog_object.message
+            img.alt="Dog did not load 😭"
+            img.style.width='300px'
+            img.style.height='300px'
+            dog_div.appendChild(img)
 
         })
 
 }
-
+document.getElementById("get-dog").addEventListener("click",GetDog)
 </script>
 </body>
 </html>
